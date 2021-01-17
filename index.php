@@ -16,7 +16,8 @@
 		<input type="submit" name="create_tb" value="Создать таблицы Cus_mai Cus_ph ">
 		<input type="submit" name="drop_tb" value="Удалить таблицы Cus_mai Cus_ph "></br>
 		<input type="submit" name="fill_tb" value="Заполнение таблиц Cus_mai Cus_ph ">
-		<input type="submit" name="show_tb" value="Вывод таблиц Cus_mai Cus_ph ">
+		<input type="submit" name="show_tb" value="Вывод таблиц Cus_mai Cus_ph "></br>
+		<input type="submit" name="readf_tb" value="Запись таблиц Cus_mai Cus_ph из файла tb.dat">
 	</form>	
 	<?php
 		$sql_mai = "CREATE TABLE Cus_mai (
@@ -58,7 +59,18 @@
 		VALUES ('Clark Derbin', '+10015052298', 'Tmobi');
 		";
 		$sql_show_mai = "SELECT * FROM Cus_mai ORDER by ID";
-		$sql_show_ph= "SELECT * FROM Cus_ph ORDER by ID";
+		$sql_show_ph = "SELECT * FROM Cus_ph ORDER by ID";
+		$sql_readf = file_get_contents('tb.dat');
+		if(isset($_POST['readf_tb'])){
+			$link = mysqli_connect("localhost", "root", "root", "my_db")
+				or die("Error connection" . mysqli_connect_error());
+			if (mysqli_multi_query($link, $sql_readf)) {
+				echo 'Tables filled from file!';
+			} else {
+				echo 'Error reading file: ' . $link->error;
+			}
+			mysqli_close($link);	
+		}
 		if(isset($_POST['fill_tb'])){
 			$i = 0;
 			$link = mysqli_connect("localhost", "root", "root", "my_db")

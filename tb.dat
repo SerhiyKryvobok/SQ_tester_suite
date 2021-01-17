@@ -1,0 +1,12 @@
+INSERT INTO Cus_mai (name, mail, mailOrigin) VALUES ('Jonh Dou', 'jd@mail.eu', 'EU');
+INSERT INTO Cus_mai (name, mail, mailOrigin) VALUES ('Chak Norris', 'cn@mail.com', 'INTER');
+INSERT INTO Cus_mai (name, mail, mailOrigin) VALUES ('Bill Murrey', 'bm@mail.com', 'INTER');
+INSERT INTO Cus_mai (name, mail, mailOrigin) VALUES ('Shakil O*neil', 'so@mail.eu', 'EU');
+INSERT INTO Cus_mai (name, mail, mailOrigin) VALUES ('Filip Morris', 'fm@mail.com', 'INTER');
+INSERT INTO Cus_mai (name, mail, mailOrigin) VALUES ('Clark Derbin', 'cd@mail.com', 'EU');
+INSERT INTO Cus_ph (name, phone, operator) VALUES ('Jonh Dou', '+10015002255', 'Tmobi');
+INSERT INTO Cus_ph (name, phone, operator) VALUES ('Chak Norris', '+10012001245', 'BusyNet');
+INSERT INTO Cus_ph (name, phone, operator) VALUES ('Bill Murrey', '+10012054566', 'BusyNet');
+INSERT INTO Cus_ph (name, phone, operator) VALUES ('Shakil O*neil', '+10012058842', 'BusyNet');
+INSERT INTO Cus_ph (name, phone, operator) VALUES ('Filip Morris', '+10015056648', 'Tmobi');
+INSERT INTO Cus_ph (name, phone, operator) VALUES ('Clark Derbin', '+10015052298', 'Tmobi');
